@@ -1,0 +1,47 @@
+/* ════════════════════════════════════════════════
+   UTILITIES
+   Classes pequenas para substituir estilos inline.
+════════════════════════════════════════════════ */
+.delay-50 { transition-delay: 0.05s; }
+.delay-100 { transition-delay: 0.10s; }
+.delay-150 { transition-delay: 0.15s; }
+.delay-200 { transition-delay: 0.20s; }
+.delay-250 { transition-delay: 0.25s; }
+.delay-300 { transition-delay: 0.30s; }
+
+.mt-14 { margin-top: 14px; }
+.mb-8 { margin-bottom: 8px; }
+.spacer-12 { height: 12px; }
+
+.pulse-dot--small { width: 5px; height: 5px; }
+.filter-row--inside-table { padding: 12px 16px 0; }
+.inline-badges { display: flex; gap: 8px; padding-top: 4px; flex-wrap: wrap; }
+.btn-sm { padding: 8px 18px; font-size: 0.8rem; }
+
+.fill-8 { width: 8%; }
+.fill-13 { width: 13%; }
+.fill-22 { width: 22%; }
+.fill-30 { width: 30%; }
+.fill-35 { width: 35%; }
+.fill-64 { width: 64%; }
+.fill-78 { width: 78%; }
+.fill-87 { width: 87%; }
+.fill-91 { width: 91%; }
+
+.bg-danger { background: var(--danger); }
+.bg-danger-soft { background: #ff7a93; }
+.bg-warn { background: var(--warn); }
+.bg-info { background: var(--accent2); }
+.bg-ok { background: var(--ok); }
+.bg-accent { background: var(--accent); }
+.bg-muted { background: var(--muted); }
+
+.text-danger { color: var(--danger); }
+.text-danger-soft { color: #ff7a93; }
+.text-warn { color: var(--warn); }
+.text-info { color: var(--accent2); }
+.text-ok { color: var(--ok); }
+.text-accent { color: var(--accent); }
+
+.td-mono { font-family: var(--mono); font-size: 0.8rem; }
+.td-strong { font-weight: 700; }

@@ -1,0 +1,19 @@
+/* ════════════════════════════════════════════════
+       CTA / CONTACT
+    ════════════════════════════════════════════════ */
+    .contact-section { position: relative; overflow: hidden; }
+    .contact-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at center, rgba(0,200,160,0.08) 0%, transparent 65%);
+    }
+    .contact-inner {
+      position: relative;
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    .contact-inner .section-title { font-size: clamp(2rem, 4vw, 3.2rem); margin-bottom: 20px; }
+    .contact-inner p { color: var(--muted2); font-size: 1.05rem; line-height: 1.65; margin-bottom: 36px; }
+    .contact-actions { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }

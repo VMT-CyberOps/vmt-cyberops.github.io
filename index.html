@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="VMT CyberOps — soluções sob demanda para evoluir processos de Gestão de Vulnerabilidades com automação, indicadores e visões operacionais e executivas." name="description"/>
+<title>VMT CyberOps | Gestão de Vulnerabilidades com Automação</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="assets/css/01-base.css" rel="stylesheet"/>
+<link href="assets/css/02-navigation.css" rel="stylesheet"/>
+<link href="assets/css/03-components.css" rel="stylesheet"/>
+<link href="assets/css/04-hero.css" rel="stylesheet"/>
+<link href="assets/css/05-about.css" rel="stylesheet"/>
+<link href="assets/css/06-pain.css" rel="stylesheet"/>
+<link href="assets/css/07-models.css" rel="stylesheet"/>
+<link href="assets/css/08-values.css" rel="stylesheet"/>
+<link href="assets/css/09-contributor.css" rel="stylesheet"/>
+<link href="assets/css/10-contact.css" rel="stylesheet"/>
+<link href="assets/css/11-footer.css" rel="stylesheet"/>
+<link href="assets/css/12-solution.css" rel="stylesheet"/>
+<link href="assets/css/13-responsive.css" rel="stylesheet"/>
+<link href="assets/css/14-utilities.css" rel="stylesheet"/>
+
+</head>
+<body>
+<canvas id="bgCanvas"></canvas>
+<div class="noise-overlay"></div>
+<!-- NAV -->
+<header class="site-header" id="siteHeader">
+<nav class="navbar container">
+<a class="brand" href="#home">
+<img alt="" class="brand-icon" src="assets/images/logo.svg"/>
+<span class="brand-name">VMT <em>CyberOps</em></span>
+</a>
+<button aria-label="Menu" class="nav-toggle" id="navToggle">
+<span></span><span></span><span></span>
+</button>
+<div class="nav-links" id="navLinks">
+<a href="#about">Proposta</a>
+<a href="#pain">Onde ajudamos</a>
+<a href="#models">Modelos</a>
+<a href="#values">Valores</a>
+<a href="#contributors">Time</a>
+<a class="nav-cta" href="#contact">Fale conosco</a>
+</div>
+</nav>
+</header>
+<main>
+<!-- ══ HERO ═══════════════════════════════════════ -->
+<section class="hero section" id="home">
+<div class="container hero-grid">
+<div class="hero-content reveal">
+<div class="hero-eyebrow">
+<span class="pulse-dot"></span>
+          Automação · GVM · Indicadores · GRC
+        </div>
+<h1>Evolua sua <span class="accent-word">Gestão de Vulnerabilidades</span>.</h1>
+<p class="hero-sub">
+          Criamos soluções sob demanda para reduzir tarefas manuais, organizar dados técnicos e transformar seu processo operacional e executivo com automação real.
+        </p>
+<div class="hero-actions">
+<a class="btn btn-primary" href="#models">Ver demonstrações →</a>
+<a class="btn btn-outline" href="#contact">Falar com a equipe</a>
+</div>
+<div class="hero-tags">
+<span class="hero-tag">Coleta automatizada</span>
+<span class="hero-tag">Priorização CVSS</span>
+<span class="hero-tag">SLA tracking</span>
+<span class="hero-tag">Visão executiva</span>
+<span class="hero-tag">GRC</span>
+<span class="hero-tag">Sem vendor lock-in</span>
+</div>
+</div>
+<div class="hero-card reveal delay-150">
+<div class="card-topbar">
+<span class="dot dot-r"></span>
+<span class="dot dot-y"></span>
+<span class="dot dot-g"></span>
+<span class="card-topbar-title">VMT CyberOps · Dashboard Preview</span>
+<span class="badge badge-accent"><span class="pulse-dot pulse-dot--small"></span> live</span>
+</div>
+<div class="card-body">
+<div class="mini-metrics">
+<div class="mini-metric">
+<div class="mini-metric-val c-danger" id="heroCounter1">0</div>
+<div class="mini-metric-label">Críticas<br/>abertas</div>
+</div>
+<div class="mini-metric">
+<div class="mini-metric-val c-warn" id="heroCounter2">0</div>
+<div class="mini-metric-label">Fora<br/>do SLA</div>
+</div>
+<div class="mini-metric">
+<div class="mini-metric-val c-ok" id="heroCounter3">0%</div>
+<div class="mini-metric-label">SLA<br/>compliance</div>
+</div>
+<div class="mini-metric">
+<div class="mini-metric-val c-accent" id="heroCounter4">0%</div>
+<div class="mini-metric-label">Redução<br/>backlog</div>
+</div>
+</div>
+<div class="chart-section">
+<div class="chart-label">// BACKLOG TREND — últimos 6 meses</div>
+<div class="bar-chart" id="heroBarChart"></div>
+</div>
+<div class="mt-14">
+<div class="chart-label mb-8">// PIPELINE DE TRATATIVA</div>
+<div class="pipeline-steps" id="heroPipeline"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="divider"></div>
+<!-- ══ ABOUT ══════════════════════════════════════ -->
+<section class="section" id="about">
+<div class="container">
+<div class="reveal">
+<div class="section-label">// Nossa proposta</div>
+<h2 class="section-title">Automação sob demanda para<br/>melhorar o processo, não só o relatório.</h2>
+<p class="section-sub">A VMT CyberOps ajuda times de segurança a organizar dados, padronizar análises, gerar indicadores e estruturar entregas operacionais e executivas com mais clareza e menos esforço manual.</p>
+</div>
+<div class="about-grid">
+<article class="about-card reveal delay-100">
+<div class="about-card-icon">🎯</div>
+<h3>Missão</h3>
+<p>Tornar a Gestão de Vulnerabilidades mais eficiente, acessível e orientada por dados — sem depender de plataformas caras.</p>
+</article>
+<article class="about-card reveal delay-200">
+<div class="about-card-icon">⚙️</div>
+<h3>Como atuamos</h3>
+<p>Mapeamos tarefas manuais, modelamos o fluxo e criamos soluções sob medida para a realidade e maturidade de cada cliente.</p>
+</article>
+<article class="about-card reveal delay-300">
+<div class="about-card-icon">👥</div>
+<h3>Para quem faz sentido</h3>
+<p>Times de Segurança, GVM, GRC e empresas que precisam amadurecer processos de forma prática, rápida e acessível.</p>
+</article>
+</div>
+</div>
+</section>
+<div class="divider"></div>
+<!-- ══ PAIN ══════════════════════════════════════ -->
+<section class="section pain-section" id="pain">
+<div class="container">
+<div class="reveal">
+<div class="section-label">// Onde ajudamos</div>
+<h2 class="section-title">Menos esforço manual.<br/>Mais padronização e visibilidade.</h2>
+</div>
+<div class="pain-grid">
+<article class="pain-card reveal delay-100">
+<div class="pain-number">01 — Coleta</div>
+<h3>Consolidação de dados</h3>
+<p>Redução do trabalho manual com exports, filtros, consolidação e organização de bases de vulnerabilidades de múltiplas fontes.</p>
+</article>
+<article class="pain-card reveal delay-200">
+<div class="pain-number">02 — Análise</div>
+<h3>Priorização e tratativa</h3>
+<p>Apoio para identificar o que precisa de ação imediata, o que está fora do SLA e o que deve ser acompanhado por criticidade.</p>
+</article>
+<article class="pain-card reveal delay-300">
+<div class="pain-number">03 — Comunicação</div>
+<h3>Indicadores e visão gerencial</h3>
+<p>Transformação de dados técnicos em indicadores claros para operação, gestão e liderança — prontos para apresentação.</p>
+</article>
+</div>
+</div>
+</section>
+<div class="divider"></div>
+<!-- ══ SOLUTION ═══════════════════════════════════ -->
+<section class="section solution-section" id="solution">
+<div class="container solution-layout">
+<div class="reveal">
+<div class="section-label">// Solution em destaque</div>
+<h2 class="section-title">Automação de Indicadores para GVM</h2>
+<p class="section-sub">Uma solução sob demanda para consolidar dados técnicos, aplicar regras de análise e gerar materiais prontos para acompanhamento operacional e executivo.</p>
+<div class="solution-features">
+<div class="solution-feature"><span class="feature-check">✓</span> Indicadores por criticidade (Critical / High / Medium / Low)</div>
+<div class="solution-feature"><span class="feature-check">✓</span> SLA tracking e controle de backlog automatizado</div>
+<div class="solution-feature"><span class="feature-check">✓</span> Detecção de ativos sem autenticação</div>
+<div class="solution-feature"><span class="feature-check">✓</span> Bases operacionais consolidadas e padronizadas</div>
+<div class="solution-feature"><span class="feature-check">✓</span> Apresentações executivas geradas automaticamente</div>
+<div class="solution-feature"><span class="feature-check">✓</span> Histórico de evolução e tendências mensais</div>
+</div>
+<div class="solution-cta">
+<a class="btn btn-primary" href="#contact">Solicitar demonstração</a>
+<a class="btn btn-ghost" href="#models">Ver modelos →</a>
+</div>
+</div>
+<div class="solution-card reveal delay-200">
+<div class="solution-card-top">
+<span class="solution-card-title">VM Score — Distribuição por Criticidade</span>
+<span class="badge badge-accent">fictício</span>
+</div>
+<div class="solution-card-body">
+<div class="donut-row">
+<svg height="110" viewbox="0 0 110 110" width="110">
+<circle cx="55" cy="55" fill="none" r="40" stroke="rgba(255,255,255,0.05)" stroke-width="16"></circle>
+<!-- Critical 22% -->
+<circle cx="55" cy="55" fill="none" r="40" stroke="#ff4d6d" stroke-dasharray="55.3 196.3" stroke-dashoffset="0" stroke-linecap="butt" stroke-width="16"></circle>
+<!-- High 35% -->
+<circle cx="55" cy="55" fill="none" r="40" stroke="#f59e0b" stroke-dasharray="87.9 163.7" stroke-dashoffset="-55.3" stroke-linecap="butt" stroke-width="16"></circle>
+<!-- Medium 30% -->
+<circle cx="55" cy="55" fill="none" r="40" stroke="#0094ff" stroke-dasharray="75.4 176.2" stroke-dashoffset="-143.2" stroke-linecap="butt" stroke-width="16"></circle>
+<!-- Low 13% -->
+<circle cx="55" cy="55" fill="none" r="40" stroke="#10b981" stroke-dasharray="32.7 219.0" stroke-dashoffset="-218.6" stroke-linecap="butt" stroke-width="16"></circle>
+<text fill="#e8f4f0" font-family="JetBrains Mono" font-size="13" font-weight="700" text-anchor="middle" x="55" y="50">856</text>
+<text fill="#7a9db0" font-family="JetBrains Mono" font-size="8" text-anchor="middle" x="55" y="64">Total</text>
+</svg>
+<div class="donut-legend">
+<div class="legend-item"><span class="legend-dot bg-danger"></span><span class="legend-label">Critical</span><span class="legend-val">22% · 188</span></div>
+<div class="legend-item"><span class="legend-dot bg-warn"></span><span class="legend-label">High</span><span class="legend-val">35% · 300</span></div>
+<div class="legend-item"><span class="legend-dot bg-info"></span><span class="legend-label">Medium</span><span class="legend-val">30% · 257</span></div>
+<div class="legend-item"><span class="legend-dot bg-ok"></span><span class="legend-label">Low</span><span class="legend-val">13% · 111</span></div>
+</div>
+</div>
+<div class="progress-section">
+<div class="progress-row">
+<div class="progress-top"><span class="progress-name">SLA Compliance</span><span class="progress-pct">91%</span></div>
+<div class="progress-track"><div class="progress-fill fill-91 bg-ok"></div></div>
+</div>
+<div class="progress-row">
+<div class="progress-top"><span class="progress-name">Cobertura de Scan</span><span class="progress-pct">87%</span></div>
+<div class="progress-track"><div class="progress-fill fill-87 bg-info"></div></div>
+</div>
+<div class="progress-row">
+<div class="progress-top"><span class="progress-name">Remediação (30d)</span><span class="progress-pct">64%</span></div>
+<div class="progress-track"><div class="progress-fill fill-64 bg-accent"></div></div>
+</div>
+<div class="progress-row">
+<div class="progress-top"><span class="progress-name">Ativos Autenticados</span><span class="progress-pct">78%</span></div>
+<div class="progress-track"><div class="progress-fill fill-78 bg-warn"></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="divider"></div>
+<!-- ══ MODELOS INTERATIVOS ══════════════════════ -->
+<section class="section" id="models">
+<div class="container">
+<div class="reveal">
+<div class="section-label">// Modelos de entrega</div>
+<h2 class="section-title">Do tratamento técnico à visão de gestão.</h2>
+<p class="section-sub">A mesma solução pode apoiar diferentes camadas do processo. Explore os dois modelos abaixo — os dados são fictícios e demonstrativos.</p>
+</div>
+<div class="model-tabs reveal">
+<button class="model-tab active" data-tab="ops">⚙️ Modelo Operacional</button>
+<button class="model-tab" data-tab="exec">📊 Modelo Executivo</button>
+</div>
+<!-- OPERATIONAL -->
+<div class="model-panel active reveal" id="panel-ops">
+<div class="ops-dashboard">
+<div class="ops-topbar">
+<div class="ops-topbar-title">
+<span class="badge badge-blue">Operacional</span>
+              Vulnerability Management — Painel de Tratativa
+            </div>
+<div class="ops-topbar-actions">
+<button class="ops-btn active" data-ops-view="all">Todos</button>
+<button class="ops-btn" data-ops-view="critical">Críticos</button>
+<button class="ops-btn" data-ops-view="sla">Fora SLA</button>
+<button class="ops-btn" data-ops-view="unauth">Sem Auth</button>
+</div>
+</div>
+<div class="ops-body">
+<div class="ops-metrics-row">
+<div class="ops-metric-card danger">
+<div class="ops-metric-label">CRÍTICAS ABERTAS</div>
+<div class="ops-metric-val">188</div>
+<div class="ops-metric-trend up">↑ +12 desde semana passada</div>
+</div>
+<div class="ops-metric-card warn">
+<div class="ops-metric-label">FORA DO SLA</div>
+<div class="ops-metric-val">34</div>
+<div class="ops-metric-trend up">↑ +3 novos</div>
+</div>
+<div class="ops-metric-card info">
+<div class="ops-metric-label">SEM AUTENTICAÇÃO</div>
+<div class="ops-metric-val">41</div>
+<div class="ops-metric-trend">→ Mapear ativos</div>
+</div>
+<div class="ops-metric-card ok">
+<div class="ops-metric-label">REMEDIADAS (30d)</div>
+<div class="ops-metric-val">127</div>
+<div class="ops-metric-trend down">↓ -18% backlog</div>
+</div>
+</div>
+<div class="ops-table-wrap">
+<div class="ops-table-header">
+<span class="ops-table-title">Fila de Priorização — Top Vulnerabilidades</span>
+<div class="ops-search">
+<span>🔍</span>
+<input id="opsSearch" placeholder="Buscar CVE, ativo, host..." type="text"/>
+</div>
+</div>
+<div class="filter-row filter-row--inside-table">
+<button class="filter-chip active" data-filter="todos">Todos (12)</button>
+<button class="filter-chip" data-filter="critical">🔴 Critical</button>
+<button class="filter-chip" data-filter="high">🟠 High</button>
+<button class="filter-chip" data-filter="fora-sla">⏰ Fora SLA</button>
+<button class="filter-chip" data-filter="exploitable">⚡ Exploitable</button>
+</div>
+<table id="opsTable">
+<thead>
+<tr>
+<th>CVE</th>
+<th>Ativo / Host</th>
+<th>CVSS</th>
+<th>Criticidade</th>
+<th>Status SLA</th>
+<th>Prazo</th>
+<th>Ação</th>
+</tr>
+</thead>
+<tbody id="opsTableBody"></tbody>
+</table>
+</div>
+<div class="inline-badges">
+<span class="badge badge-accent">✓ Base atualizada: hoje 08:30</span>
+<span class="badge badge-blue">12 itens na fila</span>
+<span class="badge badge-danger">34 fora do SLA</span>
+</div>
+</div>
+</div>
+</div>
+<!-- EXECUTIVE -->
+<div class="model-panel reveal" id="panel-exec">
+<div class="exec-dashboard">
+<div class="exec-header">
+<div class="exec-header-left">
+<h3>Executive Summary — Gestão de Vulnerabilidades</h3>
+<p>Período: Junho 2025 · Ciclo mensal · Dados fictícios demonstrativos</p>
+</div>
+<div class="exec-header-badge">
+<span class="badge badge-ok">✓ Processo em maturação</span>
+<span class="badge badge-accent">Mês 6/12</span>
+</div>
+</div>
+<div class="exec-body">
+<div class="exec-kpis">
+<div class="exec-kpi">
+<div class="exec-kpi-ring">
+<svg height="72" viewbox="0 0 72 72" width="72">
+<circle cx="36" cy="36" fill="none" r="28" stroke="rgba(255,255,255,0.06)" stroke-width="8"></circle>
+<circle cx="36" cy="36" fill="none" r="28" stroke="#10b981" stroke-dasharray="160 176" stroke-dashoffset="0" stroke-linecap="round" stroke-width="8"></circle>
+</svg>
+<div class="exec-kpi-ring-val text-ok">91%</div>
+</div>
+<div class="exec-kpi-label">Conformidade de SLA</div>
+<div class="exec-kpi-delta positive">↑ +4% vs mês ant.</div>
+</div>
+<div class="exec-kpi">
+<div class="exec-kpi-ring">
+<svg height="72" viewbox="0 0 72 72" width="72">
+<circle cx="36" cy="36" fill="none" r="28" stroke="rgba(255,255,255,0.06)" stroke-width="8"></circle>
+<circle cx="36" cy="36" fill="none" r="28" stroke="#00c8a0" stroke-dasharray="145 176" stroke-dashoffset="0" stroke-linecap="round" stroke-width="8"></circle>
+</svg>
+<div class="exec-kpi-ring-val text-accent">82%</div>
+</div>
+<div class="exec-kpi-label">Score de Maturidade</div>
+<div class="exec-kpi-delta positive">↑ +6pts</div>
+</div>
+<div class="exec-kpi">
+<div class="exec-kpi-ring">
+<svg height="72" viewbox="0 0 72 72" width="72">
+<circle cx="36" cy="36" fill="none" r="28" stroke="rgba(255,255,255,0.06)" stroke-width="8"></circle>
+<circle cx="36" cy="36" fill="none" r="28" stroke="#f59e0b" stroke-dasharray="110 176" stroke-dashoffset="0" stroke-linecap="round" stroke-width="8"></circle>
+</svg>
+<div class="exec-kpi-ring-val text-warn">62%</div>
+</div>
+<div class="exec-kpi-label">Cobertura de Ativos</div>
+<div class="exec-kpi-delta positive">↑ +8%</div>
+</div>
+<div class="exec-kpi">
+<div class="exec-kpi-ring">
+<svg height="72" viewbox="0 0 72 72" width="72">
+<circle cx="36" cy="36" fill="none" r="28" stroke="rgba(255,255,255,0.06)" stroke-width="8"></circle>
+<circle cx="36" cy="36" fill="none" r="28" stroke="#ff4d6d" stroke-dasharray="22 176" stroke-dashoffset="0" stroke-linecap="round" stroke-width="8"></circle>
+</svg>
+<div class="exec-kpi-ring-val text-danger">12%</div>
+</div>
+<div class="exec-kpi-label">Risco Crítico Residual</div>
+<div class="exec-kpi-delta positive">↓ -5% meta ok</div>
+</div>
+</div>
+<div class="exec-charts-row">
+<div class="exec-chart-card">
+<div class="exec-chart-title">Evolução do Backlog — 6 meses</div>
+<svg class="sparkline-area" height="140" preserveaspectratio="none" viewbox="0 0 460 140" width="100%">
+<defs>
+<lineargradient id="areaGrad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#00c8a0" stop-opacity="0.3"></stop>
+<stop offset="100%" stop-color="#00c8a0" stop-opacity="0"></stop>
+</lineargradient>
+<lineargradient id="lineGrad" x1="0" x2="1" y1="0" y2="0">
+<stop offset="0%" stop-color="#0094ff"></stop>
+<stop offset="100%" stop-color="#00c8a0"></stop>
+</lineargradient>
+</defs>
+<!-- Grid lines -->
+<line stroke="rgba(255,255,255,0.05)" stroke-width="1" x1="0" x2="460" y1="28" y2="28"></line>
+<line stroke="rgba(255,255,255,0.05)" stroke-width="1" x1="0" x2="460" y1="70" y2="70"></line>
+<line stroke="rgba(255,255,255,0.05)" stroke-width="1" x1="0" x2="460" y1="112" y2="112"></line>
+<!-- Area -->
+<path d="M0,110 C70,100 115,88 153,80 C192,72 230,62 307,50 C345,44 384,36 460,28 L460,130 L0,130 Z" fill="url(#areaGrad)"></path>
+<!-- Line -->
+<path d="M0,110 C70,100 115,88 153,80 C192,72 230,62 307,50 C345,44 384,36 460,28" fill="none" stroke="url(#lineGrad)" stroke-linecap="round" stroke-width="2.5"></path>
+<!-- Dots -->
+<circle cx="0" cy="110" fill="#0094ff" r="4"></circle>
+<circle cx="92" cy="92" fill="#0094ff" r="4"></circle>
+<circle cx="184" cy="76" fill="#00b8d4" r="4"></circle>
+<circle cx="276" cy="56" fill="#00c8a0" r="4"></circle>
+<circle cx="368" cy="38" fill="#00c8a0" r="4"></circle>
+<circle cx="460" cy="28" fill="#00c8a0" r="4"></circle>
+<!-- Labels -->
+<text fill="#7a9db0" font-family="JetBrains Mono" font-size="8" x="0" y="130">Jan</text>
+<text fill="#7a9db0" font-family="JetBrains Mono" font-size="8" x="84" y="130">Fev</text>
+<text fill="#7a9db0" font-family="JetBrains Mono" font-size="8" x="176" y="130">Mar</text>
+<text fill="#7a9db0" font-family="JetBrains Mono" font-size="8" x="268" y="130">Abr</text>
+<text fill="#7a9db0" font-family="JetBrains Mono" font-size="8" x="358" y="130">Mai</text>
+<text fill="#7a9db0" font-family="JetBrains Mono" font-size="8" x="444" y="130">Jun</text>
+<!-- Values -->
+<text fill="#e8f4f0" font-family="JetBrains Mono" font-size="9" font-weight="700" x="0" y="106">623</text>
+<text fill="#00c8a0" font-family="JetBrains Mono" font-size="9" font-weight="700" x="444" y="24">382</text>
+</svg>
+</div>
+<div class="exec-chart-card">
+<div class="exec-chart-title">Risco por Categoria</div>
+<div class="risk-bars">
+<div class="risk-row">
+<span class="risk-label">Critical</span>
+<div class="risk-track"><div class="risk-fill fill-22 bg-danger"></div></div>
+<span class="risk-val">22%</span>
+</div>
+<div class="risk-row">
+<span class="risk-label">High</span>
+<div class="risk-track"><div class="risk-fill fill-35 bg-warn"></div></div>
+<span class="risk-val">35%</span>
+</div>
+<div class="risk-row">
+<span class="risk-label">Medium</span>
+<div class="risk-track"><div class="risk-fill fill-30 bg-info"></div></div>
+<span class="risk-val">30%</span>
+</div>
+<div class="risk-row">
+<span class="risk-label">Low</span>
+<div class="risk-track"><div class="risk-fill fill-13 bg-ok"></div></div>
+<span class="risk-val">13%</span>
+</div>
+<div class="spacer-12"></div>
+<div class="risk-row">
+<span class="risk-label">Remediado</span>
+<div class="risk-track"><div class="risk-fill fill-64 bg-accent"></div></div>
+<span class="risk-val">64%</span>
+</div>
+<div class="risk-row">
+<span class="risk-label">Aceito</span>
+<div class="risk-track"><div class="risk-fill fill-8 bg-muted"></div></div>
+<span class="risk-val">8%</span>
+</div>
+</div>
+</div>
+</div>
+<div class="exec-sla-table">
+<table>
+<thead>
+<tr>
+<th>Frente de Acompanhamento</th>
+<th>Meta</th>
+<th>Realizado</th>
+<th>Tendência</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SLA — Críticos (7 dias)</td>
+<td class="td-mono">≥ 90%</td>
+<td class="td-mono td-strong text-ok">93%</td>
+<td class="td-mono text-ok">↑ +3%</td>
+<td><span class="status-chip ok"><span class="status-dot"></span>Dentro</span></td>
+</tr>
+<tr>
+<td>SLA — Highs (30 dias)</td>
+<td class="td-mono">≥ 85%</td>
+<td class="td-mono td-strong text-ok">88%</td>
+<td class="td-mono text-ok">↑ +5%</td>
+<td><span class="status-chip ok"><span class="status-dot"></span>Dentro</span></td>
+</tr>
+<tr>
+<td>Ativos sem autenticação</td>
+<td class="td-mono">≤ 5%</td>
+<td class="td-mono td-strong text-warn">8%</td>
+<td class="td-mono text-warn">→ Estável</td>
+<td><span class="status-chip warn"><span class="status-dot"></span>Atenção</span></td>
+</tr>
+<tr>
+<td>Cobertura de scan (semanal)</td>
+<td class="td-mono">≥ 95%</td>
+<td class="td-mono td-strong text-danger-soft">87%</td>
+<td class="td-mono text-danger-soft">↓ -2%</td>
+<td><span class="status-chip danger"><span class="status-dot"></span>Abaixo</span></td>
+</tr>
+<tr>
+<td>Redução de backlog total</td>
+<td class="td-mono">-15%/mês</td>
+<td class="td-mono td-strong text-ok">-18%</td>
+<td class="td-mono text-ok">↑ +3%</td>
+<td><span class="status-chip ok"><span class="status-dot"></span>Ótimo</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="divider"></div>
+<!-- ══ VALUES ══════════════════════════════════════ -->
+<section class="section values-section" id="values">
+<div class="container">
+<div class="reveal">
+<div class="section-label">// Nossos valores</div>
+<h2 class="section-title">Segurança, qualidade e acessibilidade.</h2>
+<p class="section-sub">Desenvolvemos soluções com foco em boas práticas, privacidade e clareza de processo — com qualidade profissional e proposta acessível.</p>
+</div>
+<div class="values-grid">
+<article class="value-card reveal delay-50">
+<div class="value-icon">🔒</div>
+<h3>Confidencialidade</h3>
+<p>Responsabilidade no tratamento de dados, ativos, indicadores e evidências do ambiente de cada cliente.</p>
+</article>
+<article class="value-card reveal delay-100">
+<div class="value-icon">✅</div>
+<h3>Integridade</h3>
+<p>Indicadores consistentes, regras documentadas e resultados confiáveis para operação e gestão.</p>
+</article>
+<article class="value-card reveal delay-150">
+<div class="value-icon">⚡</div>
+<h3>Disponibilidade</h3>
+<p>Soluções pensadas para apoiar rotinas recorrentes com menos dependência de tarefas manuais.</p>
+</article>
+<article class="value-card reveal delay-200">
+<div class="value-icon">🛡️</div>
+<h3>Privacidade e LGPD</h3>
+<p>Atenção à minimização de dados sensíveis e adoção de boas práticas de proteção de dados pessoais.</p>
+</article>
+<article class="value-card reveal delay-250">
+<div class="value-icon">💡</div>
+<h3>Acessibilidade</h3>
+<p>Qualidade profissional para empresas que precisam amadurecer processos sem grandes investimentos.</p>
+</article>
+<article class="value-card reveal delay-300">
+<div class="value-icon">🎛️</div>
+<h3>Personalização</h3>
+<p>Cada automação é adaptada à realidade, maturidade e necessidade específica de cada cliente.</p>
+</article>
+</div>
+</div>
+</section>
+<div class="divider"></div>
+<!-- ══ CONTRIBUTORS ════════════════════════════════ -->
+<section class="section" id="contributors">
+<div class="container">
+<div class="reveal">
+<div class="section-label">// Contribuidores</div>
+<h2 class="section-title">Quem constrói a VMT CyberOps.</h2>
+</div>
+<div class="contributor-wrap reveal delay-150">
+<div class="contributor-card">
+<div class="contributor-avatar">MS</div>
+<div class="contributor-info">
+<h3>Marco Silva</h3>
+<div class="contributor-role">// Founder &amp; Developer — VMT CyberOps</div>
+<p class="contributor-bio">
+              Profissional de Cybersecurity com experiência em Gestão de Vulnerabilidades, automação de processos, análise de indicadores e desenvolvimento de soluções voltadas para melhoria operacional e comunicação executiva.
+            </p>
+<div class="contributor-links">
+<a class="btn btn-ghost btn-sm" href="https://www.linkedin.com" rel="noreferrer" target="_blank">
+                in LinkedIn →
+              </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="divider"></div>
+<!-- ══ CONTACT ═════════════════════════════════════ -->
+<section class="section contact-section" id="contact">
+<div class="container">
+<div class="contact-inner reveal">
+<div class="section-label">// Vamos conversar?</div>
+<h2 class="section-title">Seu processo de GVM<br/>pode evoluir hoje.</h2>
+<p>Se o seu time ainda depende de tarefas manuais para consolidar dados, gerar indicadores ou comunicar resultados, a VMT CyberOps pode ajudar com uma solução sob demanda — rápida e adaptada à sua realidade.</p>
+<div class="contact-actions">
+<a class="btn btn-primary" href="mailto:contato@vmtcyberops.com">📬 Entrar em contato</a>
+<a class="btn btn-ghost" href="#home">↑ Voltar ao início</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="container footer-inner">
+<p class="footer-copy">© <span id="currentYear"></span> VMT CyberOps. Todos os direitos reservados.</p>
+<span class="footer-brand">Automação sob demanda para <em>Gestão de Vulnerabilidades</em></span>
+</div>
+</footer>
+
+<script defer src="assets/js/data/ops-data.js"></script>
+<script defer src="assets/js/modules/background.js"></script>
+<script defer src="assets/js/modules/hero.js"></script>
+<script defer src="assets/js/modules/models.js"></script>
+<script defer src="assets/js/modules/ops-table.js"></script>
+<script defer src="assets/js/modules/effects.js"></script>
+<script defer src="assets/js/main.js"></script></body>
+</html>

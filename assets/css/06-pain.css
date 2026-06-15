@@ -1,0 +1,44 @@
+/* ════════════════════════════════════════════════
+       PAIN POINTS
+    ════════════════════════════════════════════════ */
+    .pain-section { background: var(--bg2); }
+    .pain-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 52px;
+    }
+    .pain-card {
+      padding: 30px;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s;
+    }
+    .pain-card:hover { border-color: rgba(0,200,160,0.3); }
+    .pain-card::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent), transparent);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .pain-card:hover::after { opacity: 1; }
+    .pain-number {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: var(--accent);
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      margin-bottom: 14px;
+    }
+    .pain-card h3 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .pain-card p { font-size: 0.88rem; color: var(--muted2); line-height: 1.6; }
